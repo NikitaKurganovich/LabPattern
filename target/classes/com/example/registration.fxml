@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController">
+    <children>
+      <Label text="Enter data to register " />
+      <GridPane alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField promptText="Username" GridPane.columnIndex="1" />
+            <PasswordField promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField prefHeight="6.0" prefWidth="135.0" promptText="Repeat password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" text="Username" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="62.0" text="Password" GridPane.rowIndex="1" />
+            <Label text="Repeat password" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button mnemonicParsing="false" text="Register" />
+        <Label text="Switch to Login" />
+        <Button fx:id="goToLoginButton" onAction="#switchToLogin" text="Login" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
