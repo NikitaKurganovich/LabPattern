@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
+<VBox alignment="CENTER" prefHeight="267.0" prefWidth="355.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.LoginController">
     
 
    <children>
@@ -19,6 +20,7 @@
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -29,6 +31,7 @@
             <PasswordField alignment="TOP_LEFT" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="2.0" lineSpacing="4.0" prefHeight="17.0" prefWidth="70.0" text="Password" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="2.0" text="Username" GridPane.halignment="CENTER" />
+            <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Show password" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <Button fx:id="loginButton" text="Login" />

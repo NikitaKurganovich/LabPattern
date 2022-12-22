@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 
-public class SecondaryController {
+public class RegistoryController {
 
     @FXML
     private void switchToLogin() throws IOException {

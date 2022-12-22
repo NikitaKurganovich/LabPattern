@@ -4,6 +4,8 @@ public class Account {
     private String _login;
     private String _password;
 
+    Account(String _login ,String _password);
+
     public String get_login() {
         return _login;
     }
