@@ -27,14 +27,15 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField alignment="TOP_LEFT" prefHeight="25.0" prefWidth="245.0" promptText="Username" GridPane.columnIndex="1" />
-            <PasswordField alignment="TOP_LEFT" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="username" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="245.0" promptText="Username" GridPane.columnIndex="1" />
+            <PasswordField fx:id="passwordHidden" alignment="TOP_LEFT" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="2.0" lineSpacing="4.0" prefHeight="17.0" prefWidth="70.0" text="Password" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="2.0" text="Username" GridPane.halignment="CENTER" />
-            <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Show password" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <CheckBox fx:id="checkBox" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#showPassword" text="Show password" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="passwordShown" promptText="Password" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Button fx:id="loginButton" text="Login" />
+      <Button fx:id="loginButton" onAction="#logInToApp" text="Login" />
       <Label text="Switch to Registration View" />
       <Button fx:id="goToRegistrationButton" onAction="#switchToRegistration" text="Registration" />
    </children>

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="298.0" prefWidth="359.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RegistoryController">
+<VBox alignment="CENTER" prefHeight="298.0" prefWidth="388.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RegistoryController">
     <children>
       <Label text="Enter data to register " />
       <GridPane alignment="CENTER">
@@ -26,17 +26,18 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField promptText="Username" GridPane.columnIndex="1" />
-            <PasswordField promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <PasswordField prefHeight="6.0" prefWidth="135.0" promptText="Repeat password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="username" promptText="Username" GridPane.columnIndex="1" />
+            <PasswordField fx:id="passwordHidden" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="secondPasswordHidden" prefHeight="6.0" prefWidth="135.0" promptText="Repeat password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label alignment="CENTER" text="Username" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="62.0" text="Password" GridPane.rowIndex="1" />
             <Label text="Repeat password" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Show password" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Show password" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <CheckBox fx:id="checkBox" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#showPasswords" text="Show passwords" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="passwordShown" promptText="Password" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="secondPasswordShown" promptText="Repeat password" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Button mnemonicParsing="false" text="Register" />
+      <Button mnemonicParsing="false" onAction="#registration" text="Register" />
         <Label text="Switch to Login" />
         <Button fx:id="goToLoginButton" onAction="#switchToLogin" text="Login" />
     </children>

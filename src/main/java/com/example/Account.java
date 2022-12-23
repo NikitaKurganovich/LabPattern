@@ -1,10 +1,15 @@
 package com.example;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable{
     private String _login;
     private String _password;
 
-    Account(String _login ,String _password);
+    public Account(String login ,String password){
+        this._login = login;
+        this._password = password;
+    };
 
     public String get_login() {
         return _login;

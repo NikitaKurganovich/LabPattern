@@ -1,13 +1,23 @@
-package assortment;
+package com.example;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public abstract class Item {
+public class Item implements Serializable{
     private double _price;
     private String _name;
     private String _description;
     private String _type;
-    private Date _dateOfPreparing;
+
+    public Item(double _price, String _name,String _description, String _type){
+        this._price = _price;
+        this._name = _name;
+        this._description = _description;
+        this._type = _type;
+    }
+
+    public String get_type() {
+        return _type;
+    }
 
     public String get_description() {
         return _description;
@@ -21,10 +31,6 @@ public abstract class Item {
         return _price;
     }
 
-    public String get_type() {
-        return _type;
-    }
-
     public void set_description(String _description) {
         this._description = _description;
     }
@@ -36,16 +42,8 @@ public abstract class Item {
     public void set_price(double _price) {
         this._price = _price;
     }
-
+    
     public void set_type(String _type) {
         this._type = _type;
-    }
-
-    public void set_dateOfPreparing(Date _dateOfPreparing) {
-        this._dateOfPreparing = _dateOfPreparing;
-    }
-
-    public Date get_dateOfPreparing() {
-        return _dateOfPreparing;
     }
 }
